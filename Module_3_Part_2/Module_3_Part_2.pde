@@ -17,9 +17,7 @@ void draw()
   background(130);
 
   PVector mouse = mousePos();
-  mouse.normalize().mult(500);
-
-  float angle = atan2(mouse.y, mouse.x);
+  mouse.normalize().mult(350);
 
   //red outer glow
   strokeWeight(15);
@@ -34,6 +32,7 @@ void draw()
   line(0, 0, -mouse.x, -mouse.y);
 
   // handle
+  float angle = atan2(mouse.y, mouse.x);
   pushMatrix();
   translate(0, 0);
   rotate(angle);
